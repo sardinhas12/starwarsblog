@@ -6,9 +6,14 @@ import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
+import {Planet} from "./component/planets.jsx";
 
+import {Vehicle} from "./component/vehicles.jsx";
+import {Details} from "./component/details.jsx";
+import {Character} from "./component/characters.jsx";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import {OneCharacter} from "./views/oneCharacter.jsx";
 
 //create your first component
 const Layout = () => {
@@ -30,6 +35,21 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
+						</Route>
+						<Route exact path="/details/:uid">
+							<Details />
+						</Route>
+						<Route exact path="/character/:uid">
+							<Character />
+						</Route>
+						<Route exact path="/planet/:uid">
+							<Planet />
+						</Route>
+						<Route exact path="/vehicle/:uid">
+							<Vehicle />
+						</Route>
+						<Route exact path="/oneCharacter/:theid">
+							<OneCharacter />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
